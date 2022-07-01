@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 393545ba68866f2439c8c111465dbaf5, type: 3}
   m_Name: Water Element
   m_EditorClassIdentifier: 
-  ElementName: Water
-  ElementIcon: {fileID: 0}
-  weaknesses: []
-  resistances: []
+  Name: Water
+  Icon: {fileID: 21300000, guid: a2de253a965cd9245a4eb4bc5386571f, type: 3}
+  Weaknesses: []
+  Resistances: []

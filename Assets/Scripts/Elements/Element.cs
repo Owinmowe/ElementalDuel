@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Owinmowe.ElementalFrenzy
+namespace Owinmowe.ElementalDuel
 {
     
     [CreateAssetMenu(fileName = "Element", menuName = "ScriptableObjects/Element", order = 1)]
@@ -10,13 +10,13 @@ namespace Owinmowe.ElementalFrenzy
 
         #region Public Fields
 
-        public string ElementName = "Element";
+        public string Name = "Element";
 
-        public Sprite ElementIcon = default;
+        public Sprite Icon = default;
 
-        public List<Element> weaknesses = default;
+        public List<Element> Weaknesses = default;
 
-        public List<Element> resistances = default;
+        public List<Element> Resistances = default;
 
         #endregion
 
@@ -34,9 +34,9 @@ namespace Owinmowe.ElementalFrenzy
 
         #region Public Methods
 
-        public bool HasWeaknessTo(Element element) => weaknesses.Contains(element);
+        public bool HasWeaknessTo(Element element) => Weaknesses.Contains(element);
 
-        public bool HasResistanceTo(Element element) => resistances.Contains(element);
+        public bool HasResistanceTo(Element element) => Resistances.Contains(element);
 
         #endregion
 

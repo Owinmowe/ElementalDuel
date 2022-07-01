@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 393545ba68866f2439c8c111465dbaf5, type: 3}
-  m_Name: Fire Element
+  m_Name: Earth Element
   m_EditorClassIdentifier: 
-  Name: Fire
-  Icon: {fileID: 21300000, guid: b25f8d7dea537c643b743b82d507e604, type: 3}
+  Name: Earth
+  Icon: {fileID: 21300000, guid: 7a201a494144dbd44ae8f89082c28b4c, type: 3}
   Weaknesses: []
   Resistances: []

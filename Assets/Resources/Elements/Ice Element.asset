@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 393545ba68866f2439c8c111465dbaf5, type: 3}
-  m_Name: Fire Element
+  m_Name: Ice Element
   m_EditorClassIdentifier: 
-  Name: Fire
-  Icon: {fileID: 21300000, guid: b25f8d7dea537c643b743b82d507e604, type: 3}
+  Name: Ice
+  Icon: {fileID: 21300000, guid: 5690e17b83c2d424ab17a9896bc840ea, type: 3}
   Weaknesses: []
   Resistances: []
