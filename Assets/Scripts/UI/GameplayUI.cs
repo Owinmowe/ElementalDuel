@@ -30,7 +30,7 @@ namespace Owinmowe.ElementalDuel.UI
                 for (int i = 0; i < elementsUI.Length; i++)
                 {
                     var element = player.CurrentElements[i];
-                    elementsUI[i].SetElement(element.name, element.Icon);
+                    elementsUI[i].SetElement(element.Name, element.Icon);
                 }
             };
         }

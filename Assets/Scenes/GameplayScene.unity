@@ -795,6 +795,16 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6367847707467614514, guid: 3793558209a542e45a324d3f2308d4b5,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 800
+      objectReference: {fileID: 0}
+    - target: {fileID: 6367847707467614515, guid: 3793558209a542e45a324d3f2308d4b5,
+        type: 3}
+      propertyPath: m_Spacing
+      value: 90
+      objectReference: {fileID: 0}
     - target: {fileID: 6367847707475950634, guid: 3793558209a542e45a324d3f2308d4b5,
         type: 3}
       propertyPath: m_Pivot.x

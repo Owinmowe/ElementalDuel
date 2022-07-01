@@ -31,7 +31,7 @@ namespace Owinmowe.ElementalDuel.UI
 
         public void SetElement(string name, Sprite icon) 
         {
-            elementText.name = name;
+            elementText.text = name;
             elementImage.sprite = icon;
         }
 
