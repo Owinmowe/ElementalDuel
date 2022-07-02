@@ -4,12 +4,15 @@ using UnityEngine;
 namespace Owinmowe.ElementalDuel
 {
 
-    public class Player : MonoBehaviour
+    public class Duelist : MonoBehaviour
     {
 
         #region Public Fields
 
+        public bool ElementCasted { get; private set; }
+
         public System.Action OnElementsChanged = default;
+        public System.Action<Element, int> OnElementCast = default;
 
         public List<Element> CurrentElements 
         {
@@ -27,32 +30,34 @@ namespace Owinmowe.ElementalDuel
 
         #region Serializable Fields
 
-        [SerializeField] private int elementsAmount = 4;
-
         #endregion
 
         #region Private Fields
 
-        [SerializeField] private List<Element> currentElements = default;
+        private List<Element> currentElements = default;
 
         #endregion
 
         #region Unity Methods
 
-        private void Start()
-        {
-            ChangeElements();
-        }
-
         #endregion
 
         #region Public Methods
 
-        public void ChangeElements() 
+        public void SetElements(List<Element> elements)
         {
-            currentElements = ElementManager.Instance.GetRandomDifferentElements(elementsAmount);
+            currentElements = elements;
             OnElementsChanged?.Invoke();
         }
+
+        public void UseElement(int elementIndex) 
+        {
+            if (ElementCasted) return;
+            ElementCasted = true;
+            OnElementCast?.Invoke(currentElements[elementIndex], elementIndex);
+        }
+
+        public void UnlockCast() => ElementCasted = false;
 
         #endregion
 

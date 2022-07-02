@@ -66,7 +66,7 @@ namespace Owinmowe.ElementalDuel
 
             Shuffle(newElements);
 
-            for (int i = amount; i < newElements.Count; i++)
+            for (int i = newElements.Count - 1; i >= amount; i--)
             {
                 newElements.RemoveAt(i);
             }

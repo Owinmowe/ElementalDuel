@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Ice
   Icon: {fileID: 21300000, guid: 5690e17b83c2d424ab17a9896bc840ea, type: 3}
+  PrimaryColor: {r: 0, g: 0.7443638, b: 1, a: 1}
+  SecondaryColor: {r: 1, g: 1, b: 1, a: 1}
   Weaknesses: []
   Resistances: []

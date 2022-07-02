@@ -14,9 +14,11 @@ namespace Owinmowe.ElementalDuel
 
         public Sprite Icon = default;
 
-        public List<Element> Weaknesses = default;
+        public Color PrimaryColor = Color.white;
 
-        public List<Element> Resistances = default;
+        public Color SecondaryColor = Color.white;
+
+        public List<Element> Weaknesses = default;
 
         #endregion
 
@@ -35,8 +37,6 @@ namespace Owinmowe.ElementalDuel
         #region Public Methods
 
         public bool HasWeaknessTo(Element element) => Weaknesses.Contains(element);
-
-        public bool HasResistanceTo(Element element) => Resistances.Contains(element);
 
         #endregion
 

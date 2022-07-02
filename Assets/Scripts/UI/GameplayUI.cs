@@ -12,7 +12,7 @@ namespace Owinmowe.ElementalDuel.UI
 
         #region Serializable Fields
 
-        [SerializeField] private Player player = default;
+        [SerializeField] private Duelist player = default;
         [SerializeField] private ElementUI[] elementsUI = default;
 
         #endregion
@@ -25,12 +25,22 @@ namespace Owinmowe.ElementalDuel.UI
 
         private void Awake()
         {
+
             player.OnElementsChanged += () =>
             {
                 for (int i = 0; i < elementsUI.Length; i++)
                 {
                     var element = player.CurrentElements[i];
-                    elementsUI[i].SetElement(element.Name, element.Icon);
+                    elementsUI[i].SetElement(element);
+                }
+            };
+
+            player.OnElementCast += (element, index) =>
+            {
+                for (int i = 0; i < elementsUI.Length; i++)
+                {
+                    if (i == index) continue;
+                    elementsUI[i].Lock();
                 }
             };
         }
