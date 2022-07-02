@@ -18,7 +18,7 @@ namespace Owinmowe.ElementalDuel
 
         public Color SecondaryColor = Color.white;
 
-        public List<Element> Weaknesses = default;
+        public Element Weakness = default;
 
         #endregion
 
@@ -35,8 +35,6 @@ namespace Owinmowe.ElementalDuel
         #endregion
 
         #region Public Methods
-
-        public bool HasWeaknessTo(Element element) => Weaknesses.Contains(element);
 
         #endregion
 

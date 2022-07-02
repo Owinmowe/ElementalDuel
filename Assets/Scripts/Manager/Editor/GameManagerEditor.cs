@@ -32,7 +32,7 @@ namespace Owinmowe.ElementalDuel.EditorScripts
 
             if(Application.isPlaying && GUILayout.Button("Change Player Elements")) 
             {
-                script.SetPlayerElements();
+                script.SetElements();
             }
 
         }

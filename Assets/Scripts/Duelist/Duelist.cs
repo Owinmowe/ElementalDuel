@@ -34,7 +34,7 @@ namespace Owinmowe.ElementalDuel
 
         #region Private Fields
 
-        private List<Element> currentElements = default;
+        private List<Element> currentElements = new List<Element>();
 
         #endregion
 

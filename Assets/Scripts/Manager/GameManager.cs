@@ -9,6 +9,8 @@ namespace Owinmowe.ElementalDuel
 
         #region Public Fields
 
+        public System.Action<bool> OnPlayerCast = default;
+
         #endregion
 
         #region Serializable Fields
@@ -30,7 +32,10 @@ namespace Owinmowe.ElementalDuel
 
             player.OnElementCast += (element, index) =>
             {
+                foreach (var enemyElement in enemy.CurrentElements)
+                {
 
+                }
             };
         
         }
@@ -38,7 +43,7 @@ namespace Owinmowe.ElementalDuel
         private void Start()
         {
 
-            SetPlayerElements();
+            SetElements();
 
         }
 
@@ -46,11 +51,19 @@ namespace Owinmowe.ElementalDuel
 
         #region Public Methods
 
-        public void SetPlayerElements() 
+        public void SetElements() 
         {
-            List<Element> elements = ElementManager.Instance.GetRandomDifferentElements(elementsAmount);
-            player.SetElements(elements);
+
+            List<Element> playerElements = ElementManager.Instance.GetRandomDifferentElements(elementsAmount);
+            player.SetElements(playerElements);
             player.UnlockCast();
+
+            int enemyElementIndex = Random.Range(0, playerElements.Count);
+            List<Element> enemyElements = new List<Element>();
+            enemyElements.Add(playerElements[enemyElementIndex].Weakness);
+            enemy.SetElements(enemyElements);
+            enemy.UnlockCast();
+            
         }
 
         #endregion
